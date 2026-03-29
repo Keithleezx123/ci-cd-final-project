@@ -1,0 +1,136 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: echo
+spec:
+  description: Simple echo task for testing the pipeline
+  params:
+    - name: message
+      description: The message to echo
+      type: string
+      default: "Hello from Tekton!"
+  steps:
+    - name: echo
+      image: alpine:3
+      command: [echo]
+      args: ["$(params.message)"]
+
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: nose
+spec:
+  description: Run nosetests with coverage reporting
+  workspaces:
+    - name: source
+      description: The workspace containing the cloned source code
+  params:
+    - name: args
+      description: Arguments to pass to nose
+      type: string
+      default: "-v --with-spec --spec-color"
+  steps:
+    - name: nosetests
+      image: python:3.9-slim
+      workingDir: $(workspaces.source.path)
+      script: |
+        #!/bin/bash
+        set -e
+        python -m pip install --upgrade pip wheel
+        pip install -r requirements.txt
+        nosetests $(params.args)
+
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: cd-pipeline
+spec:
+  description: CD Pipeline for the counter service
+  params:
+    - name: repo-url
+      description: The URL of the git repo to clone
+      type: string
+    - name: branch
+      description: The branch to clone
+      type: string
+      default: "main"
+    - name: build-image
+      description: The image to build and push (e.g. image-registry.openshift-image-registry.svc:5000/namespace/image:tag)
+      type: string
+  workspaces:
+    - name: pipeline-workspace
+      description: Shared workspace for the pipeline
+  tasks:
+    - name: clone
+      taskRef:
+        name: git-clone
+        kind: ClusterTask
+      workspaces:
+        - name: output
+          workspace: pipeline-workspace
+      params:
+        - name: url
+          value: $(params.repo-url)
+        - name: revision
+          value: $(params.branch)
+        - name: deleteExisting
+          value: "true"
+
+    - name: lint
+      taskRef:
+        name: flake8
+        kind: ClusterTask
+      workspaces:
+        - name: source
+          workspace: pipeline-workspace
+      params:
+        - name: image
+          value: "python:3.9-slim"
+        - name: args
+          value: ["--count", "--max-line-length=127", "--statistics"]
+      runAfter:
+        - clone
+
+    - name: tests
+      taskRef:
+        name: nose
+      workspaces:
+        - name: source
+          workspace: pipeline-workspace
+      params:
+        - name: args
+          value: "-v --with-spec --spec-color"
+      runAfter:
+        - lint
+
+    - name: build
+      taskRef:
+        name: buildah
+        kind: ClusterTask
+      workspaces:
+        - name: source
+          workspace: pipeline-workspace
+      params:
+        - name: IMAGE
+          value: $(params.build-image)
+        - name: DOCKERFILE
+          value: ./Dockerfile
+      runAfter:
+        - tests
+
+    - name: deploy
+      taskRef:
+        name: openshift-client
+        kind: ClusterTask
+      params:
+        - name: SCRIPT
+          value: |
+            oc get namespace $(context.pipelineRun.namespace) && \
+            oc set image deployment/counter-service counter-service=$(params.build-image) || \
+            oc new-app $(params.build-image) --name=counter-service && \
+            oc expose svc/counter-service
+      runAfter:
+        - build

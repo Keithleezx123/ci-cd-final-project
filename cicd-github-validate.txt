@@ -1,0 +1,388 @@
+=== gh run list ===
+completed	success	bla	CI Build	main	push	23703155729	24s	2026-03-29T06:26:16Z
+completed	success	Initial CI workflow and task	CI Build	main	push	23703042906	26s	2026-03-29T06:18:51Z
+completed	failure	Initial commit	CI Build	main	push	23702869895	0s	2026-03-29T06:07:18Z
+
+=== gh run view 23703155729 ===
+
+✓ main CI Build · 23703155729
+Triggered via push about 9 minutes ago
+
+JOBS
+✓ build in 21s (ID 69050539035)
+
+ANNOTATIONS
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build: .github#2
+
+
+For more information about the job, try: gh run view --job=69050539035
+View this run on GitHub: https://github.com/Keithleezx123/ci-cd-final-project/actions/runs/23703155729
+
+=== gh run view 23703155729 --verbose ===
+
+✓ main CI Build · 23703155729
+Triggered via push about 9 minutes ago
+
+JOBS
+✓ build in 21s (ID 69050539035)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Checkout
+  ✓ Install dependencies
+  ✓ Lint with flake8
+  ✓ Run unit tests with nose
+  ✓ Post Checkout
+  ✓ Stop containers
+  ✓ Complete job
+
+ANNOTATIONS
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build: .github#2
+
+
+For more information about the job, try: gh run view --job=69050539035
+View this run on GitHub: https://github.com/Keithleezx123/ci-cd-final-project/actions/runs/23703155729
+
+=== gh run view --job=69050539035 --log ===
+build	Set up job	﻿2026-03-29T06:26:20.5733473Z Current runner version: '2.333.0'
+build	Set up job	2026-03-29T06:26:20.5761860Z ##[group]Runner Image Provisioner
+build	Set up job	2026-03-29T06:26:20.5762700Z Hosted Compute Agent
+build	Set up job	2026-03-29T06:26:20.5763309Z Version: 20260213.493
+build	Set up job	2026-03-29T06:26:20.5763914Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build	Set up job	2026-03-29T06:26:20.5764597Z Build Date: 2026-02-13T00:28:41Z
+build	Set up job	2026-03-29T06:26:20.5765247Z Worker ID: {1631802b-7445-43a0-9210-2f0800484b92}
+build	Set up job	2026-03-29T06:26:20.5765883Z Azure Region: northcentralus
+build	Set up job	2026-03-29T06:26:20.5766476Z ##[endgroup]
+build	Set up job	2026-03-29T06:26:20.5768017Z ##[group]Operating System
+build	Set up job	2026-03-29T06:26:20.5768642Z Ubuntu
+build	Set up job	2026-03-29T06:26:20.5769063Z 24.04.4
+build	Set up job	2026-03-29T06:26:20.5769828Z LTS
+build	Set up job	2026-03-29T06:26:20.5770253Z ##[endgroup]
+build	Set up job	2026-03-29T06:26:20.5770725Z ##[group]Runner Image
+build	Set up job	2026-03-29T06:26:20.5771370Z Image: ubuntu-24.04
+build	Set up job	2026-03-29T06:26:20.5771831Z Version: 20260323.65.1
+build	Set up job	2026-03-29T06:26:20.5772806Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-03-29T06:26:20.5774463Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+build	Set up job	2026-03-29T06:26:20.5775431Z ##[endgroup]
+build	Set up job	2026-03-29T06:26:20.5776496Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-03-29T06:26:20.5778550Z Contents: read
+build	Set up job	2026-03-29T06:26:20.5779199Z Metadata: read
+build	Set up job	2026-03-29T06:26:20.5780188Z Packages: read
+build	Set up job	2026-03-29T06:26:20.5780708Z ##[endgroup]
+build	Set up job	2026-03-29T06:26:20.5782868Z Secret source: Actions
+build	Set up job	2026-03-29T06:26:20.5783955Z Prepare workflow directory
+build	Set up job	2026-03-29T06:26:20.6207930Z Prepare all required actions
+build	Set up job	2026-03-29T06:26:20.6246508Z Getting action download info
+build	Set up job	2026-03-29T06:26:20.9046603Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+build	Set up job	2026-03-29T06:26:21.1472682Z Complete job name: build
+build	Initialize containers	﻿2026-03-29T06:26:21.2038861Z ##[group]Checking docker version
+build	Initialize containers	2026-03-29T06:26:21.2051794Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+build	Initialize containers	2026-03-29T06:26:21.2421895Z '1.48'
+build	Initialize containers	2026-03-29T06:26:21.2436344Z Docker daemon API version: '1.48'
+build	Initialize containers	2026-03-29T06:26:21.2437085Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+build	Initialize containers	2026-03-29T06:26:21.2586560Z '1.48'
+build	Initialize containers	2026-03-29T06:26:21.2598257Z Docker client API version: '1.48'
+build	Initialize containers	2026-03-29T06:26:21.2603732Z ##[endgroup]
+build	Initialize containers	2026-03-29T06:26:21.2606807Z ##[group]Clean up resources from previous jobs
+build	Initialize containers	2026-03-29T06:26:21.2612997Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=353b2b"
+build	Initialize containers	2026-03-29T06:26:21.2746817Z ##[command]/usr/bin/docker network prune --force --filter "label=353b2b"
+build	Initialize containers	2026-03-29T06:26:21.2866919Z ##[endgroup]
+build	Initialize containers	2026-03-29T06:26:21.2867401Z ##[group]Create local container network
+build	Initialize containers	2026-03-29T06:26:21.2877380Z ##[command]/usr/bin/docker network create --label 353b2b github_network_54c8c7827fc6437195ed49bfe71541d2
+build	Initialize containers	2026-03-29T06:26:21.3417802Z bbdfda3edeac92228bff4c5a212e5157c4fcc7ac60ccb3e8900a4da0bcea6413
+build	Initialize containers	2026-03-29T06:26:21.3437364Z ##[endgroup]
+build	Initialize containers	2026-03-29T06:26:21.3461663Z ##[group]Starting job container
+build	Initialize containers	2026-03-29T06:26:21.3483183Z ##[command]/usr/bin/docker pull python:3.9-slim
+build	Initialize containers	2026-03-29T06:26:21.7376920Z 3.9-slim: Pulling from library/python
+build	Initialize containers	2026-03-29T06:26:21.8537886Z 38513bd72563: Pulling fs layer
+build	Initialize containers	2026-03-29T06:26:21.8539871Z b3ec39b36ae8: Pulling fs layer
+build	Initialize containers	2026-03-29T06:26:21.8540871Z fc7443084902: Pulling fs layer
+build	Initialize containers	2026-03-29T06:26:21.8541679Z ea56f685404a: Pulling fs layer
+build	Initialize containers	2026-03-29T06:26:21.8542555Z ea56f685404a: Waiting
+build	Initialize containers	2026-03-29T06:26:21.9673626Z b3ec39b36ae8: Verifying Checksum
+build	Initialize containers	2026-03-29T06:26:21.9680636Z b3ec39b36ae8: Download complete
+build	Initialize containers	2026-03-29T06:26:22.0100350Z fc7443084902: Verifying Checksum
+build	Initialize containers	2026-03-29T06:26:22.0102097Z fc7443084902: Download complete
+build	Initialize containers	2026-03-29T06:26:22.0663777Z ea56f685404a: Verifying Checksum
+build	Initialize containers	2026-03-29T06:26:22.0667184Z ea56f685404a: Download complete
+build	Initialize containers	2026-03-29T06:26:22.0770074Z 38513bd72563: Verifying Checksum
+build	Initialize containers	2026-03-29T06:26:22.0773079Z 38513bd72563: Download complete
+build	Initialize containers	2026-03-29T06:26:23.0906318Z 38513bd72563: Pull complete
+build	Initialize containers	2026-03-29T06:26:26.0977416Z b3ec39b36ae8: Pull complete
+build	Initialize containers	2026-03-29T06:26:26.8362726Z fc7443084902: Pull complete
+build	Initialize containers	2026-03-29T06:26:26.8517323Z ea56f685404a: Pull complete
+build	Initialize containers	2026-03-29T06:26:26.8561153Z Digest: sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+build	Initialize containers	2026-03-29T06:26:26.8575695Z Status: Downloaded newer image for python:3.9-slim
+build	Initialize containers	2026-03-29T06:26:26.8584605Z docker.io/library/python:3.9-slim
+build	Initialize containers	2026-03-29T06:26:26.8666992Z ##[command]/usr/bin/docker create --name 66ad08cec1464b268608b80e0f27bfd4_python39slim_5a1616 --label 353b2b --workdir /__w/ci-cd-final-project/ci-cd-final-project --network github_network_54c8c7827fc6437195ed49bfe71541d2  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" python:3.9-slim "-f" "/dev/null"
+build	Initialize containers	2026-03-29T06:26:26.8922689Z fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Initialize containers	2026-03-29T06:26:26.8945293Z ##[command]/usr/bin/docker start fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Initialize containers	2026-03-29T06:26:27.0471062Z fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Initialize containers	2026-03-29T06:26:27.0487722Z ##[command]/usr/bin/docker ps --all --filter id=fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+build	Initialize containers	2026-03-29T06:26:27.0604644Z fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391 Up Less than a second
+build	Initialize containers	2026-03-29T06:26:27.0625284Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Initialize containers	2026-03-29T06:26:27.0751498Z CI=true
+build	Initialize containers	2026-03-29T06:26:27.0752427Z HOME=/github/home
+build	Initialize containers	2026-03-29T06:26:27.0752827Z GITHUB_ACTIONS=true
+build	Initialize containers	2026-03-29T06:26:27.0753312Z PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+build	Initialize containers	2026-03-29T06:26:27.0753794Z LANG=C.UTF-8
+build	Initialize containers	2026-03-29T06:26:27.0754095Z GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
+build	Initialize containers	2026-03-29T06:26:27.0754472Z PYTHON_VERSION=3.9.25
+build	Initialize containers	2026-03-29T06:26:27.0754875Z PYTHON_SHA256=00e07d7c0f2f0cc002432d1ee84d2a40dae404a99303e3f97701c10966c91834
+build	Initialize containers	2026-03-29T06:26:27.0773966Z ##[endgroup]
+build	Initialize containers	2026-03-29T06:26:27.0783352Z ##[group]Waiting for all services to be ready
+build	Initialize containers	2026-03-29T06:26:27.0785025Z ##[endgroup]
+build	Checkout	﻿2026-03-29T06:26:27.1097477Z ##[group]Run actions/checkout@v3
+build	Checkout	2026-03-29T06:26:27.1098184Z with:
+build	Checkout	2026-03-29T06:26:27.1098502Z   repository: Keithleezx123/ci-cd-final-project
+build	Checkout	2026-03-29T06:26:27.1099193Z   token: ***
+build	Checkout	2026-03-29T06:26:27.1099680Z   ssh-strict: true
+build	Checkout	2026-03-29T06:26:27.1099966Z   persist-credentials: true
+build	Checkout	2026-03-29T06:26:27.1100270Z   clean: true
+build	Checkout	2026-03-29T06:26:27.1100532Z   sparse-checkout-cone-mode: true
+build	Checkout	2026-03-29T06:26:27.1100845Z   fetch-depth: 1
+build	Checkout	2026-03-29T06:26:27.1101125Z   fetch-tags: false
+build	Checkout	2026-03-29T06:26:27.1101384Z   lfs: false
+build	Checkout	2026-03-29T06:26:27.1101626Z   submodules: false
+build	Checkout	2026-03-29T06:26:27.1101890Z   set-safe-directory: true
+build	Checkout	2026-03-29T06:26:27.1102565Z ##[endgroup]
+build	Checkout	2026-03-29T06:26:27.1164428Z ##[command]/usr/bin/docker exec  fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391 sh -c "cat /etc/*release | grep ^ID"
+build	Checkout	2026-03-29T06:26:27.3067332Z Syncing repository: Keithleezx123/ci-cd-final-project
+build	Checkout	2026-03-29T06:26:27.3070244Z ##[group]Getting Git version info
+build	Checkout	2026-03-29T06:26:27.3071086Z Working directory is '/__w/ci-cd-final-project/ci-cd-final-project'
+build	Checkout	2026-03-29T06:26:27.3072380Z ##[endgroup]
+build	Checkout	2026-03-29T06:26:27.3073043Z Deleting the contents of '/__w/ci-cd-final-project/ci-cd-final-project'
+build	Checkout	2026-03-29T06:26:27.3073990Z The repository will be downloaded using the GitHub REST API
+build	Checkout	2026-03-29T06:26:27.3074893Z To create a local Git repository instead, add Git 2.18 or higher to the PATH
+build	Checkout	2026-03-29T06:26:27.3075776Z Downloading the archive
+build	Checkout	2026-03-29T06:26:27.6751403Z Writing archive to disk
+build	Checkout	2026-03-29T06:26:27.6760579Z Extracting the archive
+build	Checkout	2026-03-29T06:26:27.6784433Z [command]/usr/bin/tar xz -C /__w/ci-cd-final-project/ci-cd-final-project/1e39ad17-924b-4473-a45c-c11c2d828b17 -f /__w/ci-cd-final-project/ci-cd-final-project/1e39ad17-924b-4473-a45c-c11c2d828b17.tar.gz
+build	Checkout	2026-03-29T06:26:27.6865009Z Resolved version Keithleezx123-ci-cd-final-project-8ec8b00
+build	Install dependencies	﻿2026-03-29T06:26:27.7094441Z ##[group]Run python -m pip install --upgrade pip wheel
+build	Install dependencies	2026-03-29T06:26:27.7094992Z [36;1mpython -m pip install --upgrade pip wheel[0m
+build	Install dependencies	2026-03-29T06:26:27.7095319Z [36;1mpip install -r requirements.txt[0m
+build	Install dependencies	2026-03-29T06:26:27.7098427Z shell: sh -e {0}
+build	Install dependencies	2026-03-29T06:26:27.7098650Z ##[endgroup]
+build	Install dependencies	2026-03-29T06:26:29.2711299Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+build	Install dependencies	2026-03-29T06:26:29.3721349Z Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+build	Install dependencies	2026-03-29T06:26:29.4775012Z Collecting pip
+build	Install dependencies	2026-03-29T06:26:29.4990538Z   Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+build	Install dependencies	2026-03-29T06:26:29.5233616Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 85.1 MB/s eta 0:00:00
+build	Install dependencies	2026-03-29T06:26:29.5329068Z Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.45.1)
+build	Install dependencies	2026-03-29T06:26:29.5769337Z Collecting wheel
+build	Install dependencies	2026-03-29T06:26:29.5810577Z   Downloading wheel-0.46.3-py3-none-any.whl (30 kB)
+build	Install dependencies	2026-03-29T06:26:29.6208154Z Collecting packaging>=24.0
+build	Install dependencies	2026-03-29T06:26:29.6249368Z   Downloading packaging-26.0-py3-none-any.whl (74 kB)
+build	Install dependencies	2026-03-29T06:26:29.6281696Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 kB 211.0 MB/s eta 0:00:00
+build	Install dependencies	2026-03-29T06:26:29.6878778Z Installing collected packages: pip, packaging, wheel
+build	Install dependencies	2026-03-29T06:26:29.6880037Z   Attempting uninstall: pip
+build	Install dependencies	2026-03-29T06:26:29.6886513Z     Found existing installation: pip 23.0.1
+build	Install dependencies	2026-03-29T06:26:29.8989242Z     Uninstalling pip-23.0.1:
+build	Install dependencies	2026-03-29T06:26:29.9126977Z       Successfully uninstalled pip-23.0.1
+build	Install dependencies	2026-03-29T06:26:30.8580001Z   Attempting uninstall: wheel
+build	Install dependencies	2026-03-29T06:26:30.8585643Z     Found existing installation: wheel 0.45.1
+build	Install dependencies	2026-03-29T06:26:30.8693711Z     Uninstalling wheel-0.45.1:
+build	Install dependencies	2026-03-29T06:26:30.8727083Z       Successfully uninstalled wheel-0.45.1
+build	Install dependencies	2026-03-29T06:26:30.9024019Z Successfully installed packaging-26.0 pip-26.0.1 wheel-0.46.3
+build	Install dependencies	2026-03-29T06:26:30.9032359Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+build	Install dependencies	2026-03-29T06:26:31.2966957Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+build	Install dependencies	2026-03-29T06:26:31.3773897Z Collecting Werkzeug==2.1.2 (from -r requirements.txt (line 2))
+build	Install dependencies	2026-03-29T06:26:31.3957365Z   Downloading Werkzeug-2.1.2-py3-none-any.whl.metadata (4.4 kB)
+build	Install dependencies	2026-03-29T06:26:31.4087244Z Collecting Flask==2.1.2 (from -r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:31.4118849Z   Downloading Flask-2.1.2-py3-none-any.whl.metadata (3.9 kB)
+build	Install dependencies	2026-03-29T06:26:31.4244968Z Collecting python-dotenv==0.20.0 (from -r requirements.txt (line 6))
+build	Install dependencies	2026-03-29T06:26:31.4277593Z   Downloading python_dotenv-0.20.0-py3-none-any.whl.metadata (19 kB)
+build	Install dependencies	2026-03-29T06:26:31.4429746Z Collecting gunicorn==20.1.0 (from -r requirements.txt (line 9))
+build	Install dependencies	2026-03-29T06:26:31.4476845Z   Downloading gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
+build	Install dependencies	2026-03-29T06:26:31.4568581Z Collecting honcho==1.1.0 (from -r requirements.txt (line 10))
+build	Install dependencies	2026-03-29T06:26:31.4710433Z   Downloading honcho-1.1.0-py2.py3-none-any.whl.metadata (3.4 kB)
+build	Install dependencies	2026-03-29T06:26:31.5046361Z Collecting pylint==2.14.0 (from -r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:31.5096397Z   Downloading pylint-2.14.0-py3-none-any.whl.metadata (9.6 kB)
+build	Install dependencies	2026-03-29T06:26:31.5284261Z Collecting flake8==4.0.1 (from -r requirements.txt (line 14))
+build	Install dependencies	2026-03-29T06:26:31.5321610Z   Downloading flake8-4.0.1-py2.py3-none-any.whl.metadata (4.0 kB)
+build	Install dependencies	2026-03-29T06:26:31.5919797Z Collecting black==22.3.0 (from -r requirements.txt (line 15))
+build	Install dependencies	2026-03-29T06:26:31.5960755Z   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (45 kB)
+build	Install dependencies	2026-03-29T06:26:31.6085971Z Collecting nose==1.3.7 (from -r requirements.txt (line 18))
+build	Install dependencies	2026-03-29T06:26:31.6128475Z   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+build	Install dependencies	2026-03-29T06:26:31.6193926Z Collecting pinocchio==0.4.3 (from -r requirements.txt (line 19))
+build	Install dependencies	2026-03-29T06:26:31.6254855Z   Downloading pinocchio-0.4.3-py3-none-any.whl.metadata (975 bytes)
+build	Install dependencies	2026-03-29T06:26:32.1278484Z Collecting coverage==6.3.2 (from -r requirements.txt (line 20))
+build	Install dependencies	2026-03-29T06:26:32.1320287Z   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+build	Install dependencies	2026-03-29T06:26:32.1430120Z Collecting httpie==3.2.1 (from -r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.1471302Z   Downloading httpie-3.2.1-py3-none-any.whl.metadata (7.1 kB)
+build	Install dependencies	2026-03-29T06:26:32.1649130Z Collecting Jinja2>=3.0 (from Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:32.1687561Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+build	Install dependencies	2026-03-29T06:26:32.1768245Z Collecting itsdangerous>=2.0 (from Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:32.1800553Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+build	Install dependencies	2026-03-29T06:26:32.1934430Z Collecting click>=8.0 (from Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:32.1969031Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+build	Install dependencies	2026-03-29T06:26:32.2262653Z Collecting importlib-metadata>=3.6.0 (from Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:32.2296217Z   Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+build	Install dependencies	2026-03-29T06:26:32.2348343Z Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 9)) (79.0.1)
+build	Install dependencies	2026-03-29T06:26:32.2460101Z Collecting dill>=0.2 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.2491019Z   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+build	Install dependencies	2026-03-29T06:26:32.2668828Z Collecting platformdirs>=2.2.0 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.2703422Z   Downloading platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+build	Install dependencies	2026-03-29T06:26:32.3038170Z Collecting astroid<=2.12.0-dev0,>=2.11.5 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.3082838Z   Downloading astroid-2.11.7-py3-none-any.whl.metadata (4.7 kB)
+build	Install dependencies	2026-03-29T06:26:32.3407369Z Collecting isort<6,>=4.2.5 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.3442118Z   Downloading isort-5.13.2-py3-none-any.whl.metadata (12 kB)
+build	Install dependencies	2026-03-29T06:26:32.3516207Z Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.3548009Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+build	Install dependencies	2026-03-29T06:26:32.3684658Z Collecting tomlkit>=0.10.1 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.3719065Z   Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+build	Install dependencies	2026-03-29T06:26:32.3874408Z Collecting typing-extensions>=3.10.0 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.3910001Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+build	Install dependencies	2026-03-29T06:26:32.4135389Z Collecting tomli>=1.1.0 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.4168742Z   Downloading tomli-2.4.1-py3-none-any.whl.metadata (10 kB)
+build	Install dependencies	2026-03-29T06:26:32.4198202Z Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:32.4245342Z   Downloading mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+build	Install dependencies	2026-03-29T06:26:32.4328058Z Collecting pycodestyle<2.9.0,>=2.8.0 (from flake8==4.0.1->-r requirements.txt (line 14))
+build	Install dependencies	2026-03-29T06:26:32.4368157Z   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl.metadata (31 kB)
+build	Install dependencies	2026-03-29T06:26:32.4472635Z Collecting pyflakes<2.5.0,>=2.4.0 (from flake8==4.0.1->-r requirements.txt (line 14))
+build	Install dependencies	2026-03-29T06:26:32.4512202Z   Downloading pyflakes-2.4.0-py2.py3-none-any.whl.metadata (3.9 kB)
+build	Install dependencies	2026-03-29T06:26:32.4665300Z Collecting pathspec>=0.9.0 (from black==22.3.0->-r requirements.txt (line 15))
+build	Install dependencies	2026-03-29T06:26:32.4699427Z   Downloading pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+build	Install dependencies	2026-03-29T06:26:32.4770124Z Collecting mypy-extensions>=0.4.3 (from black==22.3.0->-r requirements.txt (line 15))
+build	Install dependencies	2026-03-29T06:26:32.4805146Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+build	Install dependencies	2026-03-29T06:26:32.4928741Z Collecting colorama (from pinocchio==0.4.3->-r requirements.txt (line 19))
+build	Install dependencies	2026-03-29T06:26:32.4961555Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+build	Install dependencies	2026-03-29T06:26:32.4987499Z Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 23)) (26.0.1)
+build	Install dependencies	2026-03-29T06:26:32.6077958Z Collecting charset-normalizer>=2.0.0 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.6114432Z   Downloading charset_normalizer-3.4.6-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+build	Install dependencies	2026-03-29T06:26:32.6203360Z Collecting defusedxml>=0.6.0 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.6237678Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+build	Install dependencies	2026-03-29T06:26:32.6462017Z Collecting requests>=2.22.0 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.6495703Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+build	Install dependencies	2026-03-29T06:26:32.6674135Z Collecting Pygments>=2.5.2 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.6707178Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+build	Install dependencies	2026-03-29T06:26:32.6789063Z Collecting requests-toolbelt>=0.9.1 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:32.6821130Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+build	Install dependencies	2026-03-29T06:26:33.0112458Z Collecting multidict>=4.7.0 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.0149314Z   Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+build	Install dependencies	2026-03-29T06:26:33.0540079Z Collecting rich>=9.10.0 (from httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.0571038Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+build	Install dependencies	2026-03-29T06:26:33.0967048Z Collecting lazy-object-proxy>=1.4.0 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:33.1007971Z   Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.1 kB)
+build	Install dependencies	2026-03-29T06:26:33.3097339Z Collecting wrapt<2,>=1.11 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 13))
+build	Install dependencies	2026-03-29T06:26:33.3135461Z   Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+build	Install dependencies	2026-03-29T06:26:33.3352473Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:33.3396963Z   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+build	Install dependencies	2026-03-29T06:26:33.4497156Z Collecting MarkupSafe>=2.0 (from Jinja2>=3.0->Flask==2.1.2->-r requirements.txt (line 5))
+build	Install dependencies	2026-03-29T06:26:33.4533738Z   Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+build	Install dependencies	2026-03-29T06:26:33.4776134Z Collecting idna<4,>=2.5 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.4807943Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+build	Install dependencies	2026-03-29T06:26:33.5052298Z Collecting urllib3<3,>=1.21.1 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.5082247Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+build	Install dependencies	2026-03-29T06:26:33.5272710Z Collecting certifi>=2017.4.17 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.5304205Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+build	Install dependencies	2026-03-29T06:26:33.5454029Z Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.5487557Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+build	Install dependencies	2026-03-29T06:26:33.5610280Z Collecting markdown-it-py>=2.2.0 (from rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.5642863Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+build	Install dependencies	2026-03-29T06:26:33.5774046Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 23))
+build	Install dependencies	2026-03-29T06:26:33.5805682Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+build	Install dependencies	2026-03-29T06:26:33.6012480Z Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+build	Install dependencies	2026-03-29T06:26:33.6083389Z Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+build	Install dependencies	2026-03-29T06:26:33.6116174Z Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+build	Install dependencies	2026-03-29T06:26:33.6146855Z Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+build	Install dependencies	2026-03-29T06:26:33.6193097Z Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
+build	Install dependencies	2026-03-29T06:26:33.6238119Z Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
+build	Install dependencies	2026-03-29T06:26:33.6303202Z Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+build	Install dependencies	2026-03-29T06:26:33.6350338Z Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+build	Install dependencies	2026-03-29T06:26:33.6464529Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 152.6 MB/s  0:00:00
+build	Install dependencies	2026-03-29T06:26:33.6495684Z Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+build	Install dependencies	2026-03-29T06:26:33.6547831Z Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
+build	Install dependencies	2026-03-29T06:26:33.6595917Z Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
+build	Install dependencies	2026-03-29T06:26:33.6642980Z Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
+build	Install dependencies	2026-03-29T06:26:33.6686198Z Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+build	Install dependencies	2026-03-29T06:26:33.6719493Z Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+build	Install dependencies	2026-03-29T06:26:33.6752389Z Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+build	Install dependencies	2026-03-29T06:26:33.6782859Z Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+build	Install dependencies	2026-03-29T06:26:33.6814760Z Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+build	Install dependencies	2026-03-29T06:26:33.6847096Z Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
+build	Install dependencies	2026-03-29T06:26:33.6882209Z Downloading charset_normalizer-3.4.6-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (207 kB)
+build	Install dependencies	2026-03-29T06:26:33.6916705Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
+build	Install dependencies	2026-03-29T06:26:33.6949372Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+build	Install dependencies	2026-03-29T06:26:33.6979377Z Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+build	Install dependencies	2026-03-29T06:26:33.7012510Z Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+build	Install dependencies	2026-03-29T06:26:33.7044570Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+build	Install dependencies	2026-03-29T06:26:33.7075788Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+build	Install dependencies	2026-03-29T06:26:33.7126438Z Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+build	Install dependencies	2026-03-29T06:26:33.7159623Z Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+build	Install dependencies	2026-03-29T06:26:33.7192543Z Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (240 kB)
+build	Install dependencies	2026-03-29T06:26:33.7227575Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+build	Install dependencies	2026-03-29T06:26:33.7258984Z Downloading pathspec-1.0.4-py3-none-any.whl (55 kB)
+build	Install dependencies	2026-03-29T06:26:33.7327391Z Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
+build	Install dependencies	2026-03-29T06:26:33.7328069Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+build	Install dependencies	2026-03-29T06:26:33.7372619Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 479.5 MB/s  0:00:00
+build	Install dependencies	2026-03-29T06:26:33.7405217Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+build	Install dependencies	2026-03-29T06:26:33.7437272Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+build	Install dependencies	2026-03-29T06:26:33.7469032Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+build	Install dependencies	2026-03-29T06:26:33.7502732Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+build	Install dependencies	2026-03-29T06:26:33.7536460Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+build	Install dependencies	2026-03-29T06:26:33.7568727Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+build	Install dependencies	2026-03-29T06:26:33.7599812Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+build	Install dependencies	2026-03-29T06:26:33.7636242Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+build	Install dependencies	2026-03-29T06:26:33.7675394Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+build	Install dependencies	2026-03-29T06:26:33.7707290Z Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+build	Install dependencies	2026-03-29T06:26:33.7738804Z Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+build	Install dependencies	2026-03-29T06:26:33.7770745Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+build	Install dependencies	2026-03-29T06:26:33.7801796Z Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+build	Install dependencies	2026-03-29T06:26:33.7832928Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+build	Install dependencies	2026-03-29T06:26:33.9001785Z Installing collected packages: nose, mccabe, honcho, zipp, wrapt, Werkzeug, urllib3, typing-extensions, tomlkit, tomli, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, platformdirs, pathspec, mypy-extensions, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, requests, pinocchio, multidict, markdown-it-py, Jinja2, importlib-metadata, flake8, black, astroid, rich, requests-toolbelt, pylint, Flask, httpie
+build	Install dependencies	2026-03-29T06:26:36.9497328Z 
+build	Install dependencies	2026-03-29T06:26:36.9601339Z Successfully installed Flask-2.1.2 Jinja2-3.1.6 MarkupSafe-3.0.3 PySocks-1.7.1 Pygments-2.19.2 Werkzeug-2.1.2 astroid-2.11.7 black-22.3.0 certifi-2026.2.25 charset-normalizer-3.4.6 click-8.1.8 colorama-0.4.6 coverage-6.3.2 defusedxml-0.7.1 dill-0.4.1 flake8-4.0.1 gunicorn-20.1.0 honcho-1.1.0 httpie-3.2.1 idna-3.11 importlib-metadata-8.7.1 isort-5.13.2 itsdangerous-2.2.0 lazy-object-proxy-1.12.0 markdown-it-py-3.0.0 mccabe-0.6.1 mdurl-0.1.2 multidict-6.7.1 mypy-extensions-1.1.0 nose-1.3.7 pathspec-1.0.4 pinocchio-0.4.3 platformdirs-4.4.0 pycodestyle-2.8.0 pyflakes-2.4.0 pylint-2.14.0 python-dotenv-0.20.0 requests-2.32.5 requests-toolbelt-1.0.0 rich-14.3.3 tomli-2.4.1 tomlkit-0.14.0 typing-extensions-4.15.0 urllib3-2.6.3 wrapt-1.17.3 zipp-3.23.0
+build	Install dependencies	2026-03-29T06:26:36.9606167Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+build	Lint with flake8	﻿2026-03-29T06:26:37.3725550Z ##[group]Run flake8 service --count --select=E9,F63,F7,F82 --show-source --statistics
+build	Lint with flake8	2026-03-29T06:26:37.3726171Z [36;1mflake8 service --count --select=E9,F63,F7,F82 --show-source --statistics[0m
+build	Lint with flake8	2026-03-29T06:26:37.3726709Z [36;1mflake8 service --count --max-complexity=10 --max-line-length=127 --statistics[0m
+build	Lint with flake8	2026-03-29T06:26:37.3727229Z shell: sh -e {0}
+build	Lint with flake8	2026-03-29T06:26:37.3727417Z ##[endgroup]
+build	Lint with flake8	2026-03-29T06:26:37.6813598Z 0
+build	Lint with flake8	2026-03-29T06:26:37.8656286Z 0
+build	Run unit tests with nose	﻿2026-03-29T06:26:37.8856269Z ##[group]Run nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
+build	Run unit tests with nose	2026-03-29T06:26:37.8857076Z [36;1mnosetests -v --with-spec --spec-color --with-coverage --cover-package=app[0m
+build	Run unit tests with nose	2026-03-29T06:26:37.8857607Z shell: sh -e {0}
+build	Run unit tests with nose	2026-03-29T06:26:37.8857790Z ##[endgroup]
+build	Run unit tests with nose	2026-03-29T06:26:38.1861490Z nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+build	Run unit tests with nose	2026-03-29T06:26:38.2233810Z nose.plugins.cover: INFO: Coverage report will include only packages: ['service', 'app']
+build	Run unit tests with nose	2026-03-29T06:26:38.3960608Z 
+build	Run unit tests with nose	2026-03-29T06:26:38.3961331Z  REST API Server Tests 
+build	Run unit tests with nose	2026-03-29T06:26:38.4026948Z [1;32m- It should Create a counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4049413Z [1;32m- It should not Create a duplicate counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4084327Z [1;32m- It should Delete a counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4096391Z [1;32m- It should be healthy[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4107967Z [1;32m- It should call the index call[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4136523Z [1;32m- It should List counters[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4156740Z [1;32m- It should Read a counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4185135Z [1;32m- It should Update a counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4197516Z [1;32m- It should not Update a missing counter[1;0m
+build	Run unit tests with nose	2026-03-29T06:26:38.4216903Z /usr/local/lib/python3.9/site-packages/coverage/inorout.py:519: CoverageWarning: Module app was never imported. (module-not-imported)
+build	Run unit tests with nose	2026-03-29T06:26:38.4218244Z   self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
+build	Run unit tests with nose	2026-03-29T06:26:38.4473697Z 
+build	Run unit tests with nose	2026-03-29T06:26:38.4475210Z Name                             Stmts   Miss  Cover   Missing
+build	Run unit tests with nose	2026-03-29T06:26:38.4476966Z --------------------------------------------------------------
+build	Run unit tests with nose	2026-03-29T06:26:38.4477666Z service/__init__.py                  8      0   100%
+build	Run unit tests with nose	2026-03-29T06:26:38.4478294Z service/common/log_handlers.py      11      1    91%   37
+build	Run unit tests with nose	2026-03-29T06:26:38.4478905Z service/common/status.py            45      0   100%
+build	Run unit tests with nose	2026-03-29T06:26:38.4479694Z service/routes.py                   48      0   100%
+build	Run unit tests with nose	2026-03-29T06:26:38.4480339Z --------------------------------------------------------------
+build	Run unit tests with nose	2026-03-29T06:26:38.4480912Z TOTAL                              112      1    99%
+build	Run unit tests with nose	2026-03-29T06:26:38.4481417Z ----------------------------------------------------------------------
+build	Run unit tests with nose	2026-03-29T06:26:38.4481898Z Ran 9 tests in 0.169s
+build	Run unit tests with nose	2026-03-29T06:26:38.4482083Z 
+build	Run unit tests with nose	2026-03-29T06:26:38.4482180Z OK
+build	Run unit tests with nose	2026-03-29T06:26:38.4482316Z 
+build	Post Checkout	﻿2026-03-29T06:26:38.4883057Z Post job cleanup.
+build	Post Checkout	2026-03-29T06:26:38.4887410Z ##[command]/usr/bin/docker exec  fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391 sh -c "cat /etc/*release | grep ^ID"
+build	Stop containers	﻿2026-03-29T06:26:38.6605322Z Stop and remove container: 66ad08cec1464b268608b80e0f27bfd4_python39slim_5a1616
+build	Stop containers	2026-03-29T06:26:38.6610184Z ##[command]/usr/bin/docker rm --force fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Stop containers	2026-03-29T06:26:38.9655296Z fbf047dae48da71e6ac6a0df488de8b94a49dc5b2e95cc360fd3f52a22406391
+build	Stop containers	2026-03-29T06:26:38.9691309Z Remove container network: github_network_54c8c7827fc6437195ed49bfe71541d2
+build	Stop containers	2026-03-29T06:26:38.9697175Z ##[command]/usr/bin/docker network rm github_network_54c8c7827fc6437195ed49bfe71541d2
+build	Stop containers	2026-03-29T06:26:39.0815783Z github_network_54c8c7827fc6437195ed49bfe71541d2
+build	Complete job	﻿2026-03-29T06:26:39.0879737Z Cleaning up orphan processes
+build	Complete job	2026-03-29T06:26:39.1235868Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
